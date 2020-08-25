@@ -92,5 +92,12 @@ namespace BankApp2
             Dashboard_Fornm3 myDashboard = new Dashboard_Fornm3(loginUserName, loginUserEmail, int.Parse(loginUserCount));
             myDashboard.Show();
         }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 registerPage = new Form1();
+            registerPage.Show();
+        }
     }
 }
