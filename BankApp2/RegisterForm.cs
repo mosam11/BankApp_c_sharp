@@ -52,6 +52,7 @@ namespace BankApp2
         {
             string userEmail = TextBox2.Text;
             string userPassword = TextBox3.Text;
+            string userConfirmPassword = confirmPassword.Text;
             bool isValid = IsValidEmail(userEmail);
             if (!isValid)
             {
@@ -61,6 +62,11 @@ namespace BankApp2
             if (userPassword.Length < 6)
             {
                 MessageBox.Show("Please enter password minimum 6 character long");
+                return;
+            }
+            if (userPassword != userConfirmPassword)
+            {
+                MessageBox.Show("Password and confirm password does not match");
                 return;
             }
             con.Open();
