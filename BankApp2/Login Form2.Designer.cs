@@ -87,6 +87,7 @@
             this.loginPassword.Location = new System.Drawing.Point(192, 239);
             this.loginPassword.Multiline = true;
             this.loginPassword.Name = "loginPassword";
+            this.loginPassword.PasswordChar = '*';
             this.loginPassword.Size = new System.Drawing.Size(348, 38);
             this.loginPassword.TabIndex = 10;
             this.loginPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged);

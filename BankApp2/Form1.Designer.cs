@@ -110,6 +110,7 @@
             this.TextBox3.Location = new System.Drawing.Point(199, 242);
             this.TextBox3.Multiline = true;
             this.TextBox3.Name = "TextBox3";
+            this.TextBox3.PasswordChar = '*';
             this.TextBox3.Size = new System.Drawing.Size(348, 38);
             this.TextBox3.TabIndex = 9;
             this.TextBox3.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
