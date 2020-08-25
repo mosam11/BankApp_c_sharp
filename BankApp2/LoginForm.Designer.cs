@@ -127,7 +127,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "Login_Form2";
-            this.Text = "Login_Form2";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

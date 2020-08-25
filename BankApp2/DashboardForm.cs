@@ -12,13 +12,13 @@ using System.Windows.Forms;
 namespace BankApp2
 {
 
-    public partial class Dashboard_Fornm3 : Form
+    public partial class Dashboard : Form
     {
         int myCounter = 0;
         string myEmail = "";
         SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-F3VCQ0A\MYSERVER; Initial Catalog = Register; Integrated Security = True; Pooling=False");
 
-        public Dashboard_Fornm3(string userName, string email, int count)
+        public Dashboard(string userName, string email, int count)
         {
             InitializeComponent();
             myCounter = count;

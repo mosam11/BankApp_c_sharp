@@ -1,6 +1,6 @@
 ﻿namespace BankApp2
 {
-    partial class Dashboard_Fornm3
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -93,7 +93,7 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Dashboard_Fornm3
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,8 +103,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Name = "Dashboard_Fornm3";
-            this.Text = "Dashboard_Fornm3";
+            this.Name = "Dashboard";
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Fornm3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -89,14 +89,14 @@ namespace BankApp2
         private void displayDashboadrd() 
         {
             this.Hide();
-            Dashboard_Fornm3 myDashboard = new Dashboard_Fornm3(loginUserName, loginUserEmail, int.Parse(loginUserCount));
+            Dashboard myDashboard = new Dashboard(loginUserName, loginUserEmail, int.Parse(loginUserCount));
             myDashboard.Show();
         }
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 registerPage = new Form1();
+            RegisterForm registerPage = new RegisterForm();
             registerPage.Show();
         }
     }

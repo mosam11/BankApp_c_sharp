@@ -11,12 +11,12 @@ using System.Data.SqlClient;
 
 namespace BankApp2
 {
-    public partial class Form1 : Form
+    public partial class RegisterForm : Form
     {
 
         SqlConnection con=new SqlConnection(@"Data Source = DESKTOP-F3VCQ0A\MYSERVER; Initial Catalog = Register; Integrated Security = True; Pooling=False");
 
-        public Form1()
+        public RegisterForm()
         {
             InitializeComponent();
         }
@@ -82,7 +82,7 @@ namespace BankApp2
             TextBox2.Text = "";
             TextBox3.Text = "";
             MessageBox.Show("Registion is complete");
-            Dashboard_Fornm3 myDashboard = new Dashboard_Fornm3(TextBox1.Text, TextBox2.Text, 0);
+            Dashboard myDashboard = new Dashboard(TextBox1.Text, TextBox2.Text, 0);
             myDashboard.Show();
             this.Hide();
         }

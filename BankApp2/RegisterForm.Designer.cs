@@ -1,6 +1,6 @@
 ﻿namespace BankApp2
 {
-    partial class Form1
+    partial class RegisterForm
     {
         /// <summary>
         /// Required designer variable.
