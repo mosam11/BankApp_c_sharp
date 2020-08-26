@@ -36,7 +36,7 @@ namespace BankApp2
                     Text = caption,
                     StartPosition = FormStartPosition.CenterScreen
                 };
-                Label textLabel = new Label() { Left = 50, Top = 20, Text = text };
+                Label textLabel = new Label() { Left = 50, Top = 20, Text = text, BackColor = Color.FromArgb(247, 209, 186) };
                 TextBox textBox = new TextBox() { Left = 50, Top = 50, Width = 400 };
                 Button confirmation = new Button() { Text = "Ok", Left = 350, Width = 100, Top = 70, DialogResult = DialogResult.OK };
                 confirmation.Click += (sender, e) => { prompt.Close(); };
@@ -51,7 +51,7 @@ namespace BankApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 string value = Prompt.ShowDialog("Enter an amount", "Deposit");
@@ -73,31 +73,34 @@ namespace BankApp2
         {
             try
             {
-                string value = Prompt.ShowDialog("Enter an amount", "Withdraw");
-                int val = int.Parse(value);
-                myCounter = myCounter - val;
-                if (myCounter < 0)
-                {
-                    MessageBox.Show("Sorry Please Enter Valid Amount");
-                    return;
-                }
-                textBox1.Text = myCounter.ToString();
-                updateUserInDB();
-             }
-            catch (Exception err) 
+                AmountPopUp withDrawPopUp = new AmountPopUp("withdraw");
+                withDrawPopUp.Show();
+                //string value = Prompt.ShowDialog("Enter an amount", "Withdraw");
+                //int val = int.Parse(value);
+                //myCounter = myCounter - val;
+                //if (myCounter < 0)
+                //{
+                //    MessageBox.Show("Sorry Please Enter Valid Amount");
+                //    return;
+                //}
+                //textBox1.Text = myCounter.ToString();
+                //updateUserInDB();
+            }
+            catch (Exception err)
             {
                 MessageBox.Show("pleaze enter valid amount");
             }
-           
+
         }
 
-        private void updateUserInDB() {
+        private void updateUserInDB()
+        {
             // here get userEmail and myCounter
             // update the count value in database for user 
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update  [register] set count ='" + myCounter + "'  where email='"+myEmail+ "'";
+            cmd.CommandText = "update  [register] set count ='" + myCounter + "'  where email='" + myEmail + "'";
             cmd.ExecuteNonQuery();
             con.Close();
         }
