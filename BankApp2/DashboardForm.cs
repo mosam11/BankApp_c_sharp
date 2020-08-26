@@ -51,27 +51,44 @@ namespace BankApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string value = Prompt.ShowDialog("Enter an amount", "Deposit");
-            int val = int.Parse(value);
-            myCounter = myCounter + val;
-            textBox2.Text = myCounter.ToString();
-            // Run an sql query here to update the count of user in database
-            updateUserInDB();
+            
+            try
+            {
+                string value = Prompt.ShowDialog("Enter an amount", "Deposit");
+                int val = int.Parse(value);
+                myCounter = myCounter + val;
+                textBox1.Text = myCounter.ToString();
+                // Run an sql query here to update the count of user in database
+                updateUserInDB();
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Please add valid amount");
+            };
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string value= Prompt.ShowDialog("Enter an amount", "Withdraw");
-            int val = int.Parse(value);
-            myCounter = myCounter - val;
-            if (myCounter < 0) 
+            try
             {
-                MessageBox.Show("Sorry Please Enter Valid Amount");
-                return;
+                string value = Prompt.ShowDialog("Enter an amount", "Withdraw");
+                int val = int.Parse(value);
+                myCounter = myCounter - val;
+                if (myCounter < 0)
+                {
+                    MessageBox.Show("Sorry Please Enter Valid Amount");
+                    return;
+                }
+                textBox1.Text = myCounter.ToString();
+                updateUserInDB();
+             }
+            catch (Exception err) 
+            {
+                MessageBox.Show("pleaze enter valid amount");
             }
-            textBox2.Text = myCounter.ToString();
-            updateUserInDB();
+           
         }
 
         private void updateUserInDB() {
@@ -87,10 +104,20 @@ namespace BankApp2
 
         private void Dashboard_Fornm3_Load(object sender, EventArgs e)
         {
-            textBox2.Text = myCounter.ToString();
+            textBox1.Text = myCounter.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
