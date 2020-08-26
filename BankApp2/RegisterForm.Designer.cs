@@ -64,6 +64,7 @@
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.Size = new System.Drawing.Size(348, 38);
             this.TextBox1.TabIndex = 7;
+            this.TextBox1.Text = "isbah";
             this.TextBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // TextBox2
@@ -76,6 +77,7 @@
             this.TextBox2.Name = "TextBox2";
             this.TextBox2.Size = new System.Drawing.Size(348, 38);
             this.TextBox2.TabIndex = 8;
+            this.TextBox2.Text = "noor@gamil.com";
             this.TextBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // TextBox3
@@ -89,6 +91,7 @@
             this.TextBox3.PasswordChar = '*';
             this.TextBox3.Size = new System.Drawing.Size(348, 38);
             this.TextBox3.TabIndex = 9;
+            this.TextBox3.Text = "123456";
             this.TextBox3.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
             // 
             // button1
@@ -180,6 +183,8 @@
             this.confirmPassword.PasswordChar = '*';
             this.confirmPassword.Size = new System.Drawing.Size(348, 38);
             this.confirmPassword.TabIndex = 15;
+            this.confirmPassword.Text = "12345";
+            this.confirmPassword.TextChanged += new System.EventHandler(this.confirmPassword_TextChanged);
             // 
             // RegisterForm
             // 
