@@ -38,5 +38,17 @@ namespace BankApp2
         {
 
         }
+
+        private void updateUserInDB()
+        {
+            // here get userEmail and myCounter
+            // update the count value in database for user 
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "update  [register] set count ='" + myCounter + "'  where email='" + myEmail + "'";
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
