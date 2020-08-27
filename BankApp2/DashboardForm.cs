@@ -73,18 +73,16 @@ namespace BankApp2
         {
             try
             {
-                AmountPopUp withDrawPopUp = new AmountPopUp("withdraw");
-                withDrawPopUp.Show();
-                //string value = Prompt.ShowDialog("Enter an amount", "Withdraw");
-                //int val = int.Parse(value);
-                //myCounter = myCounter - val;
-                //if (myCounter < 0)
-                //{
-                //    MessageBox.Show("Sorry Please Enter Valid Amount");
-                //    return;
-                //}
-                //textBox1.Text = myCounter.ToString();
-                //updateUserInDB();
+                string value = Prompt.ShowDialog("Enter an amount", "Withdraw");
+                int val = int.Parse(value);
+                myCounter = myCounter - val;
+                if (myCounter < 0)
+                {
+                    MessageBox.Show("Sorry Please Enter Valid Amount");
+                    return;
+                }
+                textBox1.Text = myCounter.ToString();
+                updateUserInDB();
             }
             catch (Exception err)
             {
