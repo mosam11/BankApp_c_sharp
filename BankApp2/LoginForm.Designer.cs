@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form2));
             this.loginEmail = new System.Windows.Forms.TextBox();
             this.loginPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -126,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -135,6 +136,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.loginPassword);
             this.Controls.Add(this.loginEmail);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login_Form2";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Form2_Load);
